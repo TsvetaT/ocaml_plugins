@@ -68,6 +68,7 @@ module type Core_options = sig
   val _dshape : unit -> unit
   val _drawlambda : unit -> unit
   val _dlambda : unit -> unit
+  val _plugins : unit -> unit
 
 end
 
