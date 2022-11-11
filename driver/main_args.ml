@@ -617,8 +617,8 @@ let mk_dsource f =
 let mk_dlambda f =
   "-dlambda", Arg.Unit f, " (undocumented)"
 
-let mk_plugins f = 
-  "-plugins", Arg.Unit f, " (undocumented)"
+let mk_optplugins f = 
+  "-optplug", Arg.Unit f, " (undocumented)"
 
 let mk_drawclambda f =
   "-drawclambda", Arg.Unit f, " (undocumented)"
@@ -798,7 +798,7 @@ module type Core_options = sig
   val _dshape : unit -> unit
   val _drawlambda : unit -> unit
   val _dlambda : unit -> unit
-  val _plugins : unit -> unit
+  val _optplugins : unit -> unit
 
 end
 
@@ -1097,7 +1097,7 @@ struct
     mk_dshape F._dshape;
     mk_drawlambda F._drawlambda;
     mk_dlambda F._dlambda;
-    mk_plugins F._plugins;
+    mk_optplugins F._optplugins;
     mk_dinstr F._dinstr;
     mk_dcamlprimc F._dcamlprimc;
     mk_dtimings F._dtimings;
@@ -1169,7 +1169,7 @@ struct
     mk_dshape F._dshape;
     mk_drawlambda F._drawlambda;
     mk_dlambda F._dlambda;
-    mk_plugins F._plugins;
+    mk_optplugins F._optplugins;
     mk_dinstr F._dinstr;
 
     mk_args F._args;
@@ -1305,7 +1305,7 @@ struct
     mk_dshape F._dshape;
     mk_drawlambda F._drawlambda;
     mk_dlambda F._dlambda;
-    mk_plugins F._plugins;
+    mk_optplugins F._optplugins;
     mk_drawclambda F._drawclambda;
     mk_dclambda F._dclambda;
     mk_dcmm_invariants F._dcmm_invariants;
@@ -1420,7 +1420,7 @@ module Make_opttop_options (F : Opttop_options) = struct
     mk_dshape F._dshape;
     mk_drawlambda F._drawlambda;
     mk_dlambda F._dlambda;
-    mk_plugins F._plugins;
+    mk_optplugins F._optplugins;
     mk_drawclambda F._drawclambda;
     mk_dclambda F._dclambda;
     mk_dcmm_invariants F._dcmm_invariants;
@@ -1581,7 +1581,7 @@ module Default = struct
     let _I dir = include_dirs := (dir :: (!include_dirs))
     let _color = Misc.set_or_ignore color_reader.parse color
     let _dlambda = set dump_lambda
-    let _plugins = set dump_plugins_input
+    let _optplugins = set dump_plugins_input
     let _dparsetree = set dump_parsetree
     let _drawlambda = set dump_rawlambda
     let _dsource = set dump_source
