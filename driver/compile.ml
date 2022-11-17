@@ -37,7 +37,7 @@ let to_bytecode i Typedtree.{structure; coercion; _} =
        |> print_if i.ppf_dump Clflags.dump_rawlambda Printlambda.lambda
        |> Simplif.simplify_lambda
        |> print_if i.ppf_dump Clflags.dump_lambda Printlambda.lambda
-       |> print_if i.ppf_dump Clflags.dump_plugins_input Printlambda.lambda
+       |> print_if i.ppf_dump Clflags.dump_plugins_input Serialiser.lambda
        |> Bytegen.compile_implementation i.module_name
        |> print_if i.ppf_dump Clflags.dump_instr Printinstr.instrlist
        |> fun bytecode -> bytecode, required_globals

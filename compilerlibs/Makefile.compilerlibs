@@ -127,6 +127,7 @@ LAMBDA = \
   lambda/debuginfo.cmo \
   lambda/lambda.cmo \
   lambda/printlambda.cmo \
+  lambda/serialiser.cmo \
   lambda/switch.cmo \
   lambda/matching.cmo \
   lambda/translobj.cmo \
