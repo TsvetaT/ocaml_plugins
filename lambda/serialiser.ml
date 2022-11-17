@@ -59,12 +59,12 @@ let value_kind ppf = function
   | Pfloatval -> fprintf ppf "[float]"
   | Pboxedintval bi -> fprintf ppf "[%s]" (boxed_integer_name bi)
 
-let return_kind ppf = function
+(*let return_kind ppf = function
   | Pgenval -> ()
   | Pintval -> fprintf ppf ": int@ "
   | Pfloatval -> fprintf ppf ": float@ "
   | Pboxedintval bi -> fprintf ppf ": %s@ " (boxed_integer_name bi)
-
+*) 
 let field_kind = function
   | Pgenval -> "*"
   | Pintval -> "int"
@@ -474,7 +474,7 @@ let name_of_primitive = function
   | Preperform -> "Preperform"
   | Pdls_get -> "Pdls_get"
 
-let function_attribute ppf t =
+(*let function_attribute ppf t =
   if t.is_a_functor then
     fprintf ppf "is_a_functor@ ";
   if t.stub then
@@ -521,8 +521,10 @@ let apply_specialised_attribute ppf = function
   | Default_specialise -> ()
   | Always_specialise -> fprintf ppf " always_specialise"
   | Never_specialise -> fprintf ppf " never_specialise"
-
-let rec lam ppf = function
+*)
+let (*rec*) lam ppf = function
+        | code -> fprintf ppf "%s" (Marshal.to_string code [])
+(*
   | Lvar id ->
       Ident.print ppf id
   | Lmutvar id ->
@@ -695,13 +697,13 @@ let rec lam ppf = function
       end
   | Lifused(id, expr) ->
       fprintf ppf "@[<2>(ifused@ %a@ %a)@]" Ident.print id lam expr
-
-and sequence ppf = function
+*)
+(*and sequence ppf = function
   | Lsequence(l1, l2) ->
       fprintf ppf "%a@ %a" sequence l1 sequence l2
   | l ->
       lam ppf l
-
+*)
 let structured_constant = struct_const
 
 let lambda = lam
