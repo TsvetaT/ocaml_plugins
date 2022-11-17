@@ -522,8 +522,10 @@ let apply_specialised_attribute ppf = function
   | Always_specialise -> fprintf ppf " always_specialise"
   | Never_specialise -> fprintf ppf " never_specialise"
 *)
-let (*rec*) lam ppf = function
-        | code -> fprintf ppf "%s" (Marshal.to_string code [])
+let [@warning "-27"] (*rec*) lam ppf = function
+        | code -> 
+        let oc = open_out "marshalled_lam.txt" in
+                Printf.fprintf oc "%s" (Marshal.to_string code [])
 (*
   | Lvar id ->
       Ident.print ppf id
