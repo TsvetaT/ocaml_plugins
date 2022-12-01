@@ -2001,7 +2001,6 @@ bytecomp/bytepackager.cmo : \
     typing/subst.cmi \
     lambda/simplif.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     typing/path.cmi \
     utils/misc.cmi \
     parsing/location.cmi \
@@ -2022,7 +2021,6 @@ bytecomp/bytepackager.cmx : \
     typing/subst.cmx \
     lambda/simplif.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     typing/path.cmx \
     utils/misc.cmx \
     parsing/location.cmx \
@@ -2135,7 +2133,6 @@ bytecomp/opcodes.cmx : \
 bytecomp/opcodes.cmi :
 bytecomp/printinstr.cmo : \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     parsing/location.cmi \
     lambda/lambda.cmi \
     bytecomp/instruct.cmi \
@@ -2143,7 +2140,6 @@ bytecomp/printinstr.cmo : \
     bytecomp/printinstr.cmi
 bytecomp/printinstr.cmx : \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     parsing/location.cmx \
     lambda/lambda.cmx \
     bytecomp/instruct.cmx \
@@ -3338,14 +3334,12 @@ middle_end/compilenv.cmi : \
     middle_end/clambda.cmi
 middle_end/convert_primitives.cmo : \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     utils/misc.cmi \
     lambda/lambda.cmi \
     middle_end/clambda_primitives.cmi \
     middle_end/convert_primitives.cmi
 middle_end/convert_primitives.cmx : \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     utils/misc.cmx \
     lambda/lambda.cmx \
     middle_end/clambda_primitives.cmx \
@@ -3379,7 +3373,6 @@ middle_end/linkage_name.cmi : \
     utils/identifiable.cmi
 middle_end/printclambda.cmo : \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     middle_end/printclambda_primitives.cmi \
     lambda/lambda.cmi \
     typing/ident.cmi \
@@ -3389,7 +3382,6 @@ middle_end/printclambda.cmo : \
     middle_end/printclambda.cmi
 middle_end/printclambda.cmx : \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     middle_end/printclambda_primitives.cmx \
     lambda/lambda.cmx \
     typing/ident.cmx \
@@ -3401,7 +3393,6 @@ middle_end/printclambda.cmi : \
     middle_end/clambda.cmi
 middle_end/printclambda_primitives.cmo : \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     typing/primitive.cmi \
     lambda/lambda.cmi \
     middle_end/clambda_primitives.cmi \
@@ -3409,7 +3400,6 @@ middle_end/printclambda_primitives.cmo : \
     middle_end/printclambda_primitives.cmi
 middle_end/printclambda_primitives.cmx : \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     typing/primitive.cmx \
     lambda/lambda.cmx \
     middle_end/clambda_primitives.cmx \
@@ -3522,7 +3512,6 @@ lambda/matching.cmo : \
     lambda/switch.cmi \
     typing/printpat.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     typing/primitive.cmi \
     typing/predef.cmi \
     typing/patterns.cmi \
@@ -3545,7 +3534,6 @@ lambda/matching.cmx : \
     lambda/switch.cmx \
     typing/printpat.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     typing/primitive.cmx \
     typing/predef.cmx \
     typing/patterns.cmx \
@@ -3601,22 +3589,16 @@ lambda/serialiser.cmo : \
     typing/types.cmi \
     typing/printtyp.cmi \
     typing/primitive.cmi \
-    parsing/location.cmi \
     lambda/lambda.cmi \
     typing/ident.cmi \
-    lambda/debuginfo.cmi \
-    utils/clflags.cmi \
     parsing/asttypes.cmi \
     lambda/serialiser.cmi
 lambda/serialiser.cmx : \
     typing/types.cmx \
     typing/printtyp.cmx \
     typing/primitive.cmx \
-    parsing/location.cmx \
     lambda/lambda.cmx \
     typing/ident.cmx \
-    lambda/debuginfo.cmx \
-    utils/clflags.cmx \
     parsing/asttypes.cmi \
     lambda/serialiser.cmi
 lambda/serialiser.cmi : \
@@ -4451,7 +4433,6 @@ middle_end/flambda/flambda.cmo : \
     middle_end/flambda/base_types/set_of_closures_id.cmi \
     middle_end/flambda/projection.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     middle_end/printclambda_primitives.cmi \
     middle_end/flambda/parameter.cmi \
     utils/numbers.cmi \
@@ -4478,7 +4459,6 @@ middle_end/flambda/flambda.cmx : \
     middle_end/flambda/base_types/set_of_closures_id.cmx \
     middle_end/flambda/projection.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     middle_end/printclambda_primitives.cmx \
     middle_end/flambda/parameter.cmx \
     utils/numbers.cmx \
@@ -5967,7 +5947,6 @@ driver/compile.cmo : \
     lambda/serialiser.cmi \
     utils/profile.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     bytecomp/printinstr.cmi \
     utils/misc.cmi \
     lambda/lambda.cmi \
@@ -5983,7 +5962,6 @@ driver/compile.cmx : \
     lambda/serialiser.cmx \
     utils/profile.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     bytecomp/printinstr.cmx \
     utils/misc.cmx \
     lambda/lambda.cmx \
@@ -6171,7 +6149,6 @@ driver/optcompile.cmo : \
     lambda/simplif.cmi \
     utils/profile.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     utils/misc.cmi \
     lambda/lambda.cmi \
     middle_end/flambda/flambda_middle_end.cmi \
@@ -6188,7 +6165,6 @@ driver/optcompile.cmx : \
     lambda/simplif.cmx \
     utils/profile.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     utils/misc.cmx \
     lambda/lambda.cmx \
     middle_end/flambda/flambda_middle_end.cmx \
@@ -6532,7 +6508,6 @@ toplevel/byte/topeval.cmo : \
     typing/printtyped.cmi \
     typing/printtyp.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     bytecomp/printinstr.cmi \
     typing/predef.cmi \
     typing/persistent_env.cmi \
@@ -6568,7 +6543,6 @@ toplevel/byte/topeval.cmx : \
     typing/printtyped.cmx \
     typing/printtyp.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     bytecomp/printinstr.cmx \
     typing/predef.cmx \
     typing/persistent_env.cmx \
@@ -6673,7 +6647,6 @@ toplevel/native/topeval.cmo : \
     typing/printtyped.cmi \
     typing/printtyp.cmi \
     lambda/printlambda.cmi \
-    lambda/serialiser.cmi \
     typing/predef.cmi \
     parsing/parsetree.cmi \
     typing/outcometree.cmi \
@@ -6704,7 +6677,6 @@ toplevel/native/topeval.cmx : \
     typing/printtyped.cmx \
     typing/printtyp.cmx \
     lambda/printlambda.cmx \
-    lambda/serialiser.cmx \
     typing/predef.cmx \
     parsing/parsetree.cmi \
     typing/outcometree.cmi \

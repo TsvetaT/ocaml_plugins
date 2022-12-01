@@ -928,6 +928,7 @@ module type Optcommon_options = sig
 
   val _clambda_checks : unit -> unit
   val _dflambda : unit -> unit
+  val _optplugins: unit -> unit
   val _drawflambda : unit -> unit
   val _dflambda_invariants : unit -> unit
   val _dflambda_no_invariants : unit -> unit
@@ -1305,9 +1306,9 @@ struct
     mk_dshape F._dshape;
     mk_drawlambda F._drawlambda;
     mk_dlambda F._dlambda;
-    mk_optplugins F._optplugins;
     mk_drawclambda F._drawclambda;
     mk_dclambda F._dclambda;
+    mk_optplugins F._optplugins;
     mk_dcmm_invariants F._dcmm_invariants;
     mk_dflambda F._dflambda;
     mk_drawflambda F._drawflambda;
@@ -1608,6 +1609,7 @@ module Default = struct
     let _compact = clear optimize_for_speed
     let _dalloc = set dump_regalloc
     let _dclambda = set dump_clambda
+    let _optplugins = set dump_plugins_input
     let _dcmm = set dump_cmm
     let _dcmm_invariants = set cmm_invariants
     let _dcombine = set dump_combine
